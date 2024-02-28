@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C7E4FD02B7E869D0042623A /* swiss_721_black_rounded_bt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C7E4FCF2B7E869D0042623A /* swiss_721_black_rounded_bt.ttf */; };
+		9C89C27D2B8A8E3300E9DD42 /* VocabWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89C27C2B8A8E3200E9DD42 /* VocabWordViewModel.swift */; };
+		9C89C2812B8AC51A00E9DD42 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89C2802B8AC51A00E9DD42 /* QuestionView.swift */; };
+		9C89C2832B8B2B3800E9DD42 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89C2822B8B2B3700E9DD42 /* ProgressBar.swift */; };
+		9C89C2852B8B2D7E00E9DD42 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89C2842B8B2D7E00E9DD42 /* Answer.swift */; };
+		9C89C2872B8B2E0700E9DD42 /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89C2862B8B2E0700E9DD42 /* AnswerRow.swift */; };
+		9C89C2892B8B37CF00E9DD42 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89C2882B8B37CF00E9DD42 /* PrimaryButton.swift */; };
 		9CDE9DAB2B7D779C005C7C25 /* IssaGameVersion1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9DAA2B7D779C005C7C25 /* IssaGameVersion1App.swift */; };
 		9CDE9DAD2B7D779C005C7C25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9DAC2B7D779C005C7C25 /* ContentView.swift */; };
 		9CDE9DAF2B7D779F005C7C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DAE2B7D779F005C7C25 /* Assets.xcassets */; };
@@ -14,6 +21,32 @@
 		9CDE9DBC2B7D779F005C7C25 /* IssaGameVersion1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9DBB2B7D779F005C7C25 /* IssaGameVersion1Tests.swift */; };
 		9CDE9DC62B7D779F005C7C25 /* IssaGameVersion1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9DC52B7D779F005C7C25 /* IssaGameVersion1UITests.swift */; };
 		9CDE9DC82B7D779F005C7C25 /* IssaGameVersion1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9DC72B7D779F005C7C25 /* IssaGameVersion1UITestsLaunchTests.swift */; };
+		9CDE9DFD2B7D782B005C7C25 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DEB2B7D782A005C7C25 /* Poppins-MediumItalic.ttf */; };
+		9CDE9DFE2B7D782B005C7C25 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DEC2B7D782A005C7C25 /* Poppins-ExtraLight.ttf */; };
+		9CDE9DFF2B7D782B005C7C25 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DED2B7D782A005C7C25 /* Poppins-Thin.ttf */; };
+		9CDE9E002B7D782B005C7C25 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DEE2B7D782A005C7C25 /* Poppins-ExtraBoldItalic.ttf */; };
+		9CDE9E012B7D782B005C7C25 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DEF2B7D782A005C7C25 /* Poppins-LightItalic.ttf */; };
+		9CDE9E022B7D782B005C7C25 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DF02B7D782A005C7C25 /* Poppins-Bold.ttf */; };
+		9CDE9E032B7D782B005C7C25 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DF12B7D782A005C7C25 /* Poppins-SemiBold.ttf */; };
+		9CDE9E042B7D782B005C7C25 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DF22B7D782A005C7C25 /* Poppins-SemiBoldItalic.ttf */; };
+		9CDE9E052B7D782B005C7C25 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DF32B7D782A005C7C25 /* Poppins-ExtraBold.ttf */; };
+		9CDE9E062B7D782B005C7C25 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DF42B7D782A005C7C25 /* Poppins-ThinItalic.ttf */; };
+		9CDE9E072B7D782B005C7C25 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DF52B7D782A005C7C25 /* Poppins-Light.ttf */; };
+		9CDE9E082B7D782B005C7C25 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DF62B7D782A005C7C25 /* Poppins-BoldItalic.ttf */; };
+		9CDE9E092B7D782B005C7C25 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DF72B7D782A005C7C25 /* Poppins-Medium.ttf */; };
+		9CDE9E0A2B7D782B005C7C25 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DF82B7D782A005C7C25 /* Poppins-Regular.ttf */; };
+		9CDE9E0B2B7D782B005C7C25 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DF92B7D782B005C7C25 /* Poppins-Black.ttf */; };
+		9CDE9E0C2B7D782B005C7C25 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DFA2B7D782B005C7C25 /* Poppins-ExtraLightItalic.ttf */; };
+		9CDE9E0D2B7D782B005C7C25 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DFB2B7D782B005C7C25 /* Poppins-BlackItalic.ttf */; };
+		9CDE9E0E2B7D782B005C7C25 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9DFC2B7D782B005C7C25 /* Poppins-Italic.ttf */; };
+		9CDE9E102B7D7837005C7C25 /* RealToeflWords500.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9E0F2B7D7837005C7C25 /* RealToeflWords500.json */; };
+		9CDE9E122B7D789A005C7C25 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9E112B7D789A005C7C25 /* HomepageView.swift */; };
+		9CDE9E162B7D78D9005C7C25 /* DayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9E152B7D78D9005C7C25 /* DayDetailView.swift */; };
+		9CDE9E182B7D78F9005C7C25 /* VocabCircleDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9E172B7D78F9005C7C25 /* VocabCircleDays.swift */; };
+		9CDE9E1A2B7D7918005C7C25 /* VocabWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9E192B7D7918005C7C25 /* VocabWord.swift */; };
+		9CDE9E1C2B7D7933005C7C25 /* CircleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9E1B2B7D7933005C7C25 /* CircleScrollView.swift */; };
+		9CDE9E1E2B7D7948005C7C25 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9E1D2B7D7948005C7C25 /* Background.swift */; };
+		9CDE9E202B7D795F005C7C25 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9E1F2B7D795F005C7C25 /* Title.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +67,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C7E4FCF2B7E869D0042623A /* swiss_721_black_rounded_bt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swiss_721_black_rounded_bt.ttf; sourceTree = "<group>"; };
+		9C7E4FD12B7E86E70042623A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9C89C27C2B8A8E3200E9DD42 /* VocabWordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabWordViewModel.swift; sourceTree = "<group>"; };
+		9C89C2802B8AC51A00E9DD42 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		9C89C2822B8B2B3700E9DD42 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		9C89C2842B8B2D7E00E9DD42 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		9C89C2862B8B2E0700E9DD42 /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
+		9C89C2882B8B37CF00E9DD42 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		9CDE9DA72B7D779C005C7C25 /* IssaGameVersion1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssaGameVersion1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CDE9DAA2B7D779C005C7C25 /* IssaGameVersion1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssaGameVersion1App.swift; sourceTree = "<group>"; };
 		9CDE9DAC2B7D779C005C7C25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +85,32 @@
 		9CDE9DC12B7D779F005C7C25 /* IssaGameVersion1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IssaGameVersion1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CDE9DC52B7D779F005C7C25 /* IssaGameVersion1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssaGameVersion1UITests.swift; sourceTree = "<group>"; };
 		9CDE9DC72B7D779F005C7C25 /* IssaGameVersion1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssaGameVersion1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9CDE9DEB2B7D782A005C7C25 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-MediumItalic.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		9CDE9DEC2B7D782A005C7C25 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLight.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		9CDE9DED2B7D782A005C7C25 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Thin.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		9CDE9DEE2B7D782A005C7C25 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBoldItalic.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		9CDE9DEF2B7D782A005C7C25 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-LightItalic.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		9CDE9DF02B7D782A005C7C25 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		9CDE9DF12B7D782A005C7C25 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		9CDE9DF22B7D782A005C7C25 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBoldItalic.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		9CDE9DF32B7D782A005C7C25 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBold.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		9CDE9DF42B7D782A005C7C25 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ThinItalic.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		9CDE9DF52B7D782A005C7C25 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		9CDE9DF62B7D782A005C7C25 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-BoldItalic.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		9CDE9DF72B7D782A005C7C25 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		9CDE9DF82B7D782A005C7C25 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		9CDE9DF92B7D782B005C7C25 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Black.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
+		9CDE9DFA2B7D782B005C7C25 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLightItalic.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		9CDE9DFB2B7D782B005C7C25 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-BlackItalic.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		9CDE9DFC2B7D782B005C7C25 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Italic.ttf"; path = "../../../IssaRealGame/IssaRealGame/Fonts/Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		9CDE9E0F2B7D7837005C7C25 /* RealToeflWords500.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RealToeflWords500.json; sourceTree = "<group>"; };
+		9CDE9E112B7D789A005C7C25 /* HomepageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
+		9CDE9E152B7D78D9005C7C25 /* DayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailView.swift; sourceTree = "<group>"; };
+		9CDE9E172B7D78F9005C7C25 /* VocabCircleDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabCircleDays.swift; sourceTree = "<group>"; };
+		9CDE9E192B7D7918005C7C25 /* VocabWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabWord.swift; sourceTree = "<group>"; };
+		9CDE9E1B2B7D7933005C7C25 /* CircleScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleScrollView.swift; sourceTree = "<group>"; };
+		9CDE9E1D2B7D7948005C7C25 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		9CDE9E1F2B7D795F005C7C25 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +138,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C89C27B2B8A8C9700E9DD42 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9C89C27C2B8A8E3200E9DD42 /* VocabWordViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		9CDE9D9E2B7D779C005C7C25 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +169,14 @@
 		9CDE9DA92B7D779C005C7C25 /* IssaGameVersion1 */ = {
 			isa = PBXGroup;
 			children = (
+				9C7E4FD12B7E86E70042623A /* Info.plist */,
 				9CDE9DAA2B7D779C005C7C25 /* IssaGameVersion1App.swift */,
-				9CDE9DAC2B7D779C005C7C25 /* ContentView.swift */,
+				9CDE9DD42B7D77B1005C7C25 /* Views */,
+				9C89C27B2B8A8C9700E9DD42 /* ViewModels */,
+				9CDE9DD62B7D77C4005C7C25 /* Models */,
+				9CDE9DD52B7D77BA005C7C25 /* Components */,
+				9CDE9DD72B7D77CC005C7C25 /* Json */,
+				9CDE9DD82B7D77DD005C7C25 /* Fonts */,
 				9CDE9DAE2B7D779F005C7C25 /* Assets.xcassets */,
 				9CDE9DB02B7D779F005C7C25 /* Preview Content */,
 			);
@@ -125,6 +206,74 @@
 				9CDE9DC72B7D779F005C7C25 /* IssaGameVersion1UITestsLaunchTests.swift */,
 			);
 			path = IssaGameVersion1UITests;
+			sourceTree = "<group>";
+		};
+		9CDE9DD42B7D77B1005C7C25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CDE9DAC2B7D779C005C7C25 /* ContentView.swift */,
+				9CDE9E112B7D789A005C7C25 /* HomepageView.swift */,
+				9CDE9E152B7D78D9005C7C25 /* DayDetailView.swift */,
+				9CDE9E1B2B7D7933005C7C25 /* CircleScrollView.swift */,
+				9C89C2802B8AC51A00E9DD42 /* QuestionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9CDE9DD52B7D77BA005C7C25 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9CDE9E1D2B7D7948005C7C25 /* Background.swift */,
+				9CDE9E1F2B7D795F005C7C25 /* Title.swift */,
+				9C89C2822B8B2B3700E9DD42 /* ProgressBar.swift */,
+				9C89C2862B8B2E0700E9DD42 /* AnswerRow.swift */,
+				9C89C2882B8B37CF00E9DD42 /* PrimaryButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9CDE9DD62B7D77C4005C7C25 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9CDE9E172B7D78F9005C7C25 /* VocabCircleDays.swift */,
+				9CDE9E192B7D7918005C7C25 /* VocabWord.swift */,
+				9C89C2842B8B2D7E00E9DD42 /* Answer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CDE9DD72B7D77CC005C7C25 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				9CDE9E0F2B7D7837005C7C25 /* RealToeflWords500.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		9CDE9DD82B7D77DD005C7C25 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9C7E4FCF2B7E869D0042623A /* swiss_721_black_rounded_bt.ttf */,
+				9CDE9DF92B7D782B005C7C25 /* Poppins-Black.ttf */,
+				9CDE9DFB2B7D782B005C7C25 /* Poppins-BlackItalic.ttf */,
+				9CDE9DF02B7D782A005C7C25 /* Poppins-Bold.ttf */,
+				9CDE9DF62B7D782A005C7C25 /* Poppins-BoldItalic.ttf */,
+				9CDE9DF32B7D782A005C7C25 /* Poppins-ExtraBold.ttf */,
+				9CDE9DEE2B7D782A005C7C25 /* Poppins-ExtraBoldItalic.ttf */,
+				9CDE9DEC2B7D782A005C7C25 /* Poppins-ExtraLight.ttf */,
+				9CDE9DFA2B7D782B005C7C25 /* Poppins-ExtraLightItalic.ttf */,
+				9CDE9DFC2B7D782B005C7C25 /* Poppins-Italic.ttf */,
+				9CDE9DF52B7D782A005C7C25 /* Poppins-Light.ttf */,
+				9CDE9DEF2B7D782A005C7C25 /* Poppins-LightItalic.ttf */,
+				9CDE9DF72B7D782A005C7C25 /* Poppins-Medium.ttf */,
+				9CDE9DEB2B7D782A005C7C25 /* Poppins-MediumItalic.ttf */,
+				9CDE9DF82B7D782A005C7C25 /* Poppins-Regular.ttf */,
+				9CDE9DF12B7D782A005C7C25 /* Poppins-SemiBold.ttf */,
+				9CDE9DF22B7D782A005C7C25 /* Poppins-SemiBoldItalic.ttf */,
+				9CDE9DED2B7D782A005C7C25 /* Poppins-Thin.ttf */,
+				9CDE9DF42B7D782A005C7C25 /* Poppins-ThinItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +380,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDE9E002B7D782B005C7C25 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				9CDE9E0B2B7D782B005C7C25 /* Poppins-Black.ttf in Resources */,
+				9CDE9E072B7D782B005C7C25 /* Poppins-Light.ttf in Resources */,
+				9CDE9DFE2B7D782B005C7C25 /* Poppins-ExtraLight.ttf in Resources */,
+				9CDE9E012B7D782B005C7C25 /* Poppins-LightItalic.ttf in Resources */,
+				9C7E4FD02B7E869D0042623A /* swiss_721_black_rounded_bt.ttf in Resources */,
+				9CDE9E022B7D782B005C7C25 /* Poppins-Bold.ttf in Resources */,
 				9CDE9DB22B7D779F005C7C25 /* Preview Assets.xcassets in Resources */,
+				9CDE9E042B7D782B005C7C25 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				9CDE9E0A2B7D782B005C7C25 /* Poppins-Regular.ttf in Resources */,
+				9CDE9DFD2B7D782B005C7C25 /* Poppins-MediumItalic.ttf in Resources */,
+				9CDE9E052B7D782B005C7C25 /* Poppins-ExtraBold.ttf in Resources */,
+				9CDE9E092B7D782B005C7C25 /* Poppins-Medium.ttf in Resources */,
+				9CDE9E0C2B7D782B005C7C25 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				9CDE9E082B7D782B005C7C25 /* Poppins-BoldItalic.ttf in Resources */,
+				9CDE9E032B7D782B005C7C25 /* Poppins-SemiBold.ttf in Resources */,
+				9CDE9E062B7D782B005C7C25 /* Poppins-ThinItalic.ttf in Resources */,
+				9CDE9E102B7D7837005C7C25 /* RealToeflWords500.json in Resources */,
+				9CDE9E0D2B7D782B005C7C25 /* Poppins-BlackItalic.ttf in Resources */,
 				9CDE9DAF2B7D779F005C7C25 /* Assets.xcassets in Resources */,
+				9CDE9E0E2B7D782B005C7C25 /* Poppins-Italic.ttf in Resources */,
+				9CDE9DFF2B7D782B005C7C25 /* Poppins-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +426,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDE9E202B7D795F005C7C25 /* Title.swift in Sources */,
+				9CDE9E1A2B7D7918005C7C25 /* VocabWord.swift in Sources */,
+				9CDE9E122B7D789A005C7C25 /* HomepageView.swift in Sources */,
+				9CDE9E162B7D78D9005C7C25 /* DayDetailView.swift in Sources */,
+				9C89C2872B8B2E0700E9DD42 /* AnswerRow.swift in Sources */,
 				9CDE9DAD2B7D779C005C7C25 /* ContentView.swift in Sources */,
+				9CDE9E1E2B7D7948005C7C25 /* Background.swift in Sources */,
+				9C89C27D2B8A8E3300E9DD42 /* VocabWordViewModel.swift in Sources */,
+				9C89C2852B8B2D7E00E9DD42 /* Answer.swift in Sources */,
+				9C89C2812B8AC51A00E9DD42 /* QuestionView.swift in Sources */,
+				9CDE9E1C2B7D7933005C7C25 /* CircleScrollView.swift in Sources */,
 				9CDE9DAB2B7D779C005C7C25 /* IssaGameVersion1App.swift in Sources */,
+				9C89C2892B8B37CF00E9DD42 /* PrimaryButton.swift in Sources */,
+				9C89C2832B8B2B3800E9DD42 /* ProgressBar.swift in Sources */,
+				9CDE9E182B7D78F9005C7C25 /* VocabCircleDays.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +607,7 @@
 				DEVELOPMENT_TEAM = 89B9H2GF72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IssaGameVersion1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +637,7 @@
 				DEVELOPMENT_TEAM = 89B9H2GF72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IssaGameVersion1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

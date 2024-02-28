@@ -11,7 +11,9 @@ import SwiftUI
 struct IssaGameVersion1App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomepageView()
         }
+        
+
     }
 }
