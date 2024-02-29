@@ -10,8 +10,8 @@ import UIKit
 
 struct CirclesScrollView: View {
 
-    @StateObject private var viewModel = VocabWordViewModel() // ViewModel instance
-    @State private var selectedDay: VocabCircleDays?
+    @ObservedObject private var viewModel = VocabWordViewModel()
+//    @State private var selectedDay: VocabCircleDays?
     
     var body: some View {
         NavigationStack {
@@ -21,9 +21,7 @@ struct CirclesScrollView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 15) {
                         ForEach(VocabCircleArray.circles) { circle in
-                            NavigationLink(destination: DayDetailView(dayNumber: circle.dayNumber, viewModel: viewModel),
-                                           tag: circle,
-                                           selection: $selectedDay)  {
+                            NavigationLink(value: circle) {
                                 //VStack contains the Circles and Day texts
                                 VStack {
                                     Spacer()
@@ -51,14 +49,22 @@ struct CirclesScrollView: View {
                                     Spacer()
                                 } // VStack
                             } // NavigationLink
+                                           
                         } //ForEach
                     }//HStack
+                    .navigationDestination(for: VocabCircleDays.self) { circle in 
+                        DayDetailView(dayNumber: circle.dayNumber, viewModel: viewModel)
+                    }
                     .frame(height: 900)
                     .scrollTargetLayout()
                 } //ScrollView
                 .scrollClipDisabled()
                 .contentMargins(105, for: .scrollContent)
                 .scrollTargetBehavior(.viewAligned)
+//                .onAppear {
+//                    viewModel.wordsForDay(day: dayNumber)
+//                }
+                
                 
                 Title()
                 

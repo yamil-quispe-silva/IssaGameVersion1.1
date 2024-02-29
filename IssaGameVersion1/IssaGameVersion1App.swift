@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct IssaGameVersion1App: App {
+    
+//    @StateObject private var viewModel = VocabWordViewModel()
+    
     var body: some Scene {
         WindowGroup {
             HomepageView()
+//                .environmentObject(viewModel)
         }
         
 

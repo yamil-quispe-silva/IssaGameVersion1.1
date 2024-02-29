@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct DayDetailView: View {
-//    var viewModel: VocabWordViewModel
+    @State var viewModel: VocabWordViewModel
     var dayNumber: Int
-    @ObservedObject var viewModel: VocabWordViewModel
     
+
     //to make the back button of the list white
     @Environment(\.presentationMode) var presentationMode
     
     // Add an initializer to change the scrollbar indicator color
     init(dayNumber: Int, viewModel: VocabWordViewModel) {
         self.dayNumber = dayNumber
-        self.viewModel = viewModel
+        self._viewModel = State(initialValue: viewModel)
+//        self.wordsArray = viewModel.wordsForDay(day: dayNumber)
         // Change the scrollbar indicator color to white
         UIScrollView.appearance().indicatorStyle = .white
     }
@@ -53,6 +54,7 @@ struct DayDetailView: View {
                     .frame(height: 33)
                 
                 NavigationLink(destination: QuestionView(dayNumber: dayNumber, viewModel: viewModel)){
+                    
                     Text("Start!")
                         .padding(.horizontal, 25)
                         .bold()
@@ -65,6 +67,9 @@ struct DayDetailView: View {
             }
             .frame(width: 400, height: 670, alignment: .top)
             .padding()
+        }
+        .onAppear() {
+            viewModel.setQuestion()
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
@@ -90,7 +95,7 @@ struct DayDetailView: View {
 struct DayDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = VocabWordViewModel()
-        viewModel.words = VocabWordViewModel.sampleWords
+//        viewModel.words = VocabWordViewModel.sampleWords
         return DayDetailView(dayNumber: 1, viewModel: viewModel)
     }
 }

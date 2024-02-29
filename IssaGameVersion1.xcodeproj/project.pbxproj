@@ -216,6 +216,7 @@
 				9CDE9E152B7D78D9005C7C25 /* DayDetailView.swift */,
 				9CDE9E1B2B7D7933005C7C25 /* CircleScrollView.swift */,
 				9C89C2802B8AC51A00E9DD42 /* QuestionView.swift */,
+				9C89C2862B8B2E0700E9DD42 /* AnswerRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,7 +227,6 @@
 				9CDE9E1D2B7D7948005C7C25 /* Background.swift */,
 				9CDE9E1F2B7D795F005C7C25 /* Title.swift */,
 				9C89C2822B8B2B3700E9DD42 /* ProgressBar.swift */,
-				9C89C2862B8B2E0700E9DD42 /* AnswerRow.swift */,
 				9C89C2882B8B37CF00E9DD42 /* PrimaryButton.swift */,
 			);
 			path = Components;

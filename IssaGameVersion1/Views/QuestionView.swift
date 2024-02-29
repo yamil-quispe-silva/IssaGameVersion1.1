@@ -36,7 +36,7 @@ struct QuestionView: View {
                 ProgressBar(progress: viewModel.progress)
                 
                 Text(viewModel.question)
-                    .font(Font.custom("Swiss721BT-BlackRounded", size: 28))
+                    .font(Font.custom("Swiss721BT-BlackRounded", size: 20))
                     .foregroundColor(.yellow)
                 
                 
@@ -82,7 +82,7 @@ struct QuestionView: View {
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = VocabWordViewModel()
-        viewModel.words = VocabWordViewModel.sampleWords
+//        viewModel.words = VocabWordViewModel.sampleWords
         return QuestionView(dayNumber: 1, viewModel: viewModel)
     }
 }

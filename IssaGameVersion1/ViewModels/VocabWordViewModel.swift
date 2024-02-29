@@ -11,11 +11,12 @@ import SwiftUI
 final class VocabWordViewModel: ObservableObject {
     
     // stores all the words objcts from json
-    @Published var words = [VocabWord]()
+    @Published private(set) var words = [VocabWord]()
     
     // length of array
-    @Published private(set) var length = 0
+    @Published private(set) var length = 20
     
+    // day number
     @Published private(set) var dayNumber = 0
 
     // index of current word at the dayWordsArray(20 words)
@@ -63,7 +64,10 @@ final class VocabWordViewModel: ObservableObject {
     
     
     init() {
+        
         loadData()
+        
+        
     }
     
     
@@ -82,16 +86,9 @@ final class VocabWordViewModel: ObservableObject {
         do {
             // Remove the force unwrap from `data`
             let loadedData = try decoder.decode([VocabWord].self, from: data)
+
             
-            DispatchQueue.main.async {
-                self.words = loadedData
-                self.dayWordsArray = self.wordsForDay(day: self.dayNumber)
-                self.length = self.dayWordsArray.count
-                self.setQuestion()
-            }
-            
-            
-            
+            words = loadedData
         } catch {
             fatalError("Could not decode file in the project: \(error)")
         }
@@ -101,24 +98,25 @@ final class VocabWordViewModel: ObservableObject {
     
     // func to allocate 20 different words per circle day
     func wordsForDay(day: Int) -> [VocabWord] {
+        print(dayNumber)
         dayNumber = day
         let startIndex = (day - 1) * 20
         let endIndex = startIndex + 19
         
-        // Check if the startIndex is out of bounds.
-        // If startIndex is greater than or equal to the number of words, reset to day 1 or handle appropriately.
-        if startIndex >= words.count {
-            // Return early or handle the case where there are not enough words.
-            // This could be returning words for day 1, or returning an empty array, etc.
-            return wordsForDay(day: 1) // Recursive call, make sure this doesn't create an infinite loop under certain conditions.
+        // Ensure startIndex is within bounds
+        if (startIndex > words.count) {
+            dayWordsArray = Array(words[0...19])
+            return dayWordsArray
         }
 
-        // Calculate the safe endIndex to ensure it does not go out of bounds.
+        // Ensure endIndex is within bounds, adjusting if necessary
         let safeEndIndex = min(endIndex, words.count - 1)
         
-        // Now that we have ensured our indices are safe, we can slice the array without causing an out-of-bounds exception.
-        let dayWordsArray = Array(words[startIndex...safeEndIndex])
-        
+        // Now it's safe to slice the array
+        dayWordsArray = Array(words[startIndex...safeEndIndex])
+//        print(words[startIndex...safeEndIndex])
+
+
         return dayWordsArray
     }
     
@@ -165,34 +163,39 @@ final class VocabWordViewModel: ObservableObject {
     // func to go to next question
     func goToNextQuestion() {
         // index of current word at the dayWordsArray(20 words)
-        if index + 1 < length {         // < 20
-            index += 1
-            setQuestion()
-        } else {
-            reachedEnd = true
-        }
+//        DispatchQueue.main.async {
+            if self.index + 1 < self.length { // < 20
+                self.index += 1
+                self.setQuestion()
+            } else {
+                self.reachedEnd = true
+            }
+//        }
     }
     
     
     // set question func
     func setQuestion() {
-        answerSelected = false
-        progress = CGFloat(Double(index + 1) / Double(length) * 350)
-        
-        if index < length {
-            let currentWord = (dayWordsArray[index])
-            question = randomSentenceFromWord(word: currentWord) // string
-            answerChoices = answerChoicesRandom(word: currentWord) // array of Answer(s)
+//        DispatchQueue.main.async {
+            self.answerSelected = false
+            self.progress = CGFloat(Double(self.index + 1) / Double(self.length) * 350)
             
-        }
+            if self.index < self.length {
+                let currentWord = self.dayWordsArray[self.index]
+                self.question = self.randomSentenceFromWord(word: currentWord) // string
+                self.answerChoices = self.answerChoicesRandom(word: currentWord) // array of Answer(s)
+            }
+//        }
         
     }
     
     func selectAnswer(answer: Answer) {
-        answerSelected = true
-        if answer.isCorrect {
-            score += 1
-        }
+//        DispatchQueue.main.async {
+            self.answerSelected = true
+            if answer.isCorrect {
+                self.score += 1
+            }
+//        }
     }
     
     
