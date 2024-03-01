@@ -41,16 +41,14 @@ struct AnswerRow: View {
         .background(.white)
         .overlay(
             RoundedRectangle(cornerRadius: 22) // Rounded rectangle overlay
-                .stroke(isSelected ? (answer.isCorrect ? green : red): .gray, lineWidth: 16)
+                .stroke(viewModel.answerSelected ? (isSelected ? (answer.isCorrect ? green : red): .gray) : .gray, lineWidth: 16)
         )
         .cornerRadius(22)
         .onTapGesture {
-            isSelected = true
-//            if !triviaManager.answerSelected {
-//                isSelected = true
-//                triviaManager.selectAnswer(answer: answer)
-//                
-//            }
+            if !viewModel.answerSelected {
+                isSelected = true
+                viewModel.selectAnswer(answer: answer)
+            }
         }
     }
 }
@@ -60,6 +58,6 @@ struct AnswerRow: View {
 struct AnswerRow_Previews: PreviewProvider {
     static var previews: some View {
         let viewModelSample = VocabWordViewModel()
-        AnswerRow(answer: Answer(isCorrect: false, word: "consider", definition: "def", translationSpanish: "trans", sentences: ["",""]), viewModel: viewModelSample)
+        AnswerRow(answer: Answer(isCorrect: true, word: "consider", definition: "def", translationSpanish: "trans", sentences: ["",""]), viewModel: viewModelSample)
     }
 }

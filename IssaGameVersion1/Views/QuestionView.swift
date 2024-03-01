@@ -36,7 +36,7 @@ struct QuestionView: View {
                 ProgressBar(progress: viewModel.progress)
                 
                 Text(viewModel.question)
-                    .font(Font.custom("Swiss721BT-BlackRounded", size: 20))
+                    .font(Font.custom("Swiss721BT-BlackRounded", size: 22))
                     .foregroundColor(.yellow)
                 
                 
@@ -48,7 +48,13 @@ struct QuestionView: View {
                         
                 Spacer()
 
-                PrimaryButton(text: "Next")
+                Button {
+                    viewModel.goToNextQuestion()
+                } label: {
+                    PrimaryButton(text: "Next", background: viewModel.answerSelected ? .white : .gray)
+                }
+                .disabled(!viewModel.answerSelected)
+                
                 
             }
             .padding()

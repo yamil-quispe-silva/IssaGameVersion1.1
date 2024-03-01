@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PrimaryButton: View {
     var text: String
+    var background: Color
     
     var body: some View {
         ZStack {
@@ -21,12 +22,12 @@ struct PrimaryButton: View {
                 .font(Font.custom("Swiss721BT-BlackRounded", size: 18))
                 .foregroundColor(.black)
                 .padding()
-                .background(Color.white)
+                .background(background)
                 .cornerRadius(35)
         }
     }
 }
 
 #Preview {
-    PrimaryButton(text: "Next")
+    PrimaryButton(text: "Next", background: .gray)
 }

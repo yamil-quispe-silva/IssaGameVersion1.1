@@ -115,8 +115,9 @@ final class VocabWordViewModel: ObservableObject {
         // Now it's safe to slice the array
         dayWordsArray = Array(words[startIndex...safeEndIndex])
 //        print(words[startIndex...safeEndIndex])
-
-
+//        length = dayWordsArray.count
+        
+        
         return dayWordsArray
     }
     
@@ -133,17 +134,33 @@ final class VocabWordViewModel: ObservableObject {
     }
     
     
-    
     //func to have the corresponding correct answer and the incorrect ones too
     func answerChoicesRandom(word: VocabWord) -> [Answer] {
-        let random1IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
-        let random2IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
-        let random3IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
+        var random1IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
+        var random2IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
+        var random3IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
         
+        while (index == random1IndexFromDayWords || random2IndexFromDayWords == random1IndexFromDayWords || random3IndexFromDayWords == random2IndexFromDayWords || random3IndexFromDayWords == random1IndexFromDayWords) {
+            random1IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
+            random2IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
+            random3IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
+        }
+        
+        while (index == random2IndexFromDayWords) {
+            random2IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
+        }
+        
+        while (index == random3IndexFromDayWords) {
+            random3IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
+        }
+        
+        // getting the random answers
         let choice1: VocabWord = dayWordsArray[random1IndexFromDayWords]
         let choice2: VocabWord = dayWordsArray[random2IndexFromDayWords]
         let choice3: VocabWord = dayWordsArray[random3IndexFromDayWords]
         
+        
+        // conversion from VocabWord type to Anwer
         let answer1: Answer = Answer(isCorrect: false, word: choice1.word, definition: choice1.definition, translationSpanish: choice1.translationSpanish, sentences: choice1.sentences)
         
         let answer2: Answer = Answer(isCorrect: false, word: choice2.word, definition: choice2.definition, translationSpanish: choice2.translationSpanish, sentences: choice2.sentences)

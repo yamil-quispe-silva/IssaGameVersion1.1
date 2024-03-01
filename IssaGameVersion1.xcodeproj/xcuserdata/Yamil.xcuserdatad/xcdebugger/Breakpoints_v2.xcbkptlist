@@ -822,8 +822,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
-            landmarkName = "DayDetailView"
-            landmarkType = "14">
+            landmarkName = "init(dayNumber:viewModel:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "760F1B2B-1A29-436A-8826-CD0A81CE9E48 - 53e819a041194146"
@@ -886,8 +886,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
-            landmarkName = "init(dayNumber:viewModel:)"
-            landmarkType = "7">
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -902,8 +902,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
-            landmarkName = "init(dayNumber:viewModel:)"
-            landmarkType = "7">
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
