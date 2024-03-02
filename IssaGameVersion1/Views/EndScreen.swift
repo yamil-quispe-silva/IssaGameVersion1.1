@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EndScreen: View {
     @State var viewModel: VocabWordViewModel
+//    @ObservedObject var viewModel: VocabWordViewModel
     @EnvironmentObject var navigationController: NavigationController
 
     //to make the back button of the list white
@@ -17,7 +18,7 @@ struct EndScreen: View {
     // Add an initializer to change the scrollbar indicator color
     init(viewModel: VocabWordViewModel) {
         self._viewModel = State(initialValue: viewModel)
-//        self.wordsArray = viewModel.wordsForDay(day: dayNumber)
+        
         // Change the scrollbar indicator color to white
         UIScrollView.appearance().indicatorStyle = .white
     }
@@ -53,9 +54,10 @@ struct EndScreen: View {
                 Spacer()
                 
                 Button("Back Home") {
-                    navigationController.resetToRootView()
                     viewModel.updateBestScore()
                     viewModel.resetGame()
+                    
+                    navigationController.resetToRootView()
                 }
                 .foregroundColor(.black)
                 .font(Font.custom("Swiss721BT-BlackRounded", size: 18))

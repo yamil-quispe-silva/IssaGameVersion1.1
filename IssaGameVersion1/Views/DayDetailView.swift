@@ -11,6 +11,8 @@ struct DayDetailView: View {
     
     @EnvironmentObject var navigationController: NavigationController
     @State var viewModel: VocabWordViewModel
+    
+    
     var dayNumber: Int
     
 
@@ -21,8 +23,7 @@ struct DayDetailView: View {
     init(dayNumber: Int, viewModel: VocabWordViewModel) {
         self.dayNumber = dayNumber
         self._viewModel = State(initialValue: viewModel)
-//        self.wordsArray = viewModel.wordsForDay(day: dayNumber)
-        // Change the scrollbar indicator color to white
+
         UIScrollView.appearance().indicatorStyle = .white
         
     }
@@ -35,14 +36,18 @@ struct DayDetailView: View {
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 37))
                     .foregroundColor(.white)
                 Text("daily goal:  \(viewModel.length) words")
-                    .padding()
-                    .font(Font.custom("Swiss721BT-BlackRounded", size: 21))
+                    .padding(2)
+                    .font(Font.custom("Swiss721BT-BlackRounded", size: 18))
                     .foregroundColor(.yellow)
+//                Text("best score:  \(viewModel.circles[dayNumber - 1].superScore) / 20")
+//                    .padding(-1)
+//                    .font(Font.custom("Swiss721BT-BlackRounded", size: 17))
+//                    .foregroundColor(.yellow)
                 Spacer()
                     .frame(height: 20)
                 List {
                     ForEach(viewModel.wordsForDay(day: dayNumber)) { word in
-                        Text(word.word)
+                        Text("\(word.word)  ---  \(word.translationSpanish)")
                             .padding(8)
                             .bold()
                             .font(Font.custom("Swiss721BT-BlackRounded", size: 20))

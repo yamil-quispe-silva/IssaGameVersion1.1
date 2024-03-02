@@ -10,6 +10,9 @@ import SwiftUI
 @main
 struct IssaGameVersion1App: App {
     
+    
+    // 230 json , need 600
+    
 //    @StateObject private var viewModel = VocabWordViewModel()
     var navigationController = NavigationController()
     

@@ -23,7 +23,7 @@ final class VocabWordViewModel: ObservableObject {
     @Published private(set) var index = 0
     
     // score for the user
-    @Published private(set) var score = 18
+    @Published private(set) var score = 0
     
     // this var indicates if we have reached the end of the array
     @Published private(set) var reachedEnd = false
@@ -43,8 +43,45 @@ final class VocabWordViewModel: ObservableObject {
     // has the 20 words of the day circle in an array ////////////////////
     @Published private(set) var dayWordsArray: [VocabWord] = []
     
-    // stores best score from user
+    // stores percentage of best score from user
+    @Published private(set) var percentBestScore = 0
+    
+    //stores the best score so far
     @Published private(set) var bestScore = 0
+    
+    // non static array for circles content:
+    @Published var circles = [VocabCircleDays(color: .white, title: "day 1", emoji:"🚀", dayNumber: 1, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 2", emoji:"👻", dayNumber: 2, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 3", emoji:"❤️", dayNumber: 3, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 4", emoji:"🗣️", dayNumber: 4, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 5", emoji:"🙌", dayNumber: 5, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 6", emoji:"💯", dayNumber: 6, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 7", emoji:"👨‍💻", dayNumber: 7, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 8", emoji:"🔥", dayNumber: 8, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 9", emoji:"👀", dayNumber: 9, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 10", emoji:"😂", dayNumber: 10, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 11", emoji:"📚", dayNumber: 11, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 12", emoji:"💧", dayNumber: 12, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 13", emoji:"🏀", dayNumber: 13, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 14", emoji:"✅", dayNumber: 14, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 15", emoji:"‼️", dayNumber: 15, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 16", emoji:"🌈", dayNumber: 16, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 17", emoji:"📘", dayNumber: 17, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 18", emoji:"🐽", dayNumber: 18, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 19", emoji:"⚽️", dayNumber: 19, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 20", emoji:"🚨", dayNumber: 20, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 21", emoji:"💀", dayNumber: 21, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 22", emoji:"💰", dayNumber: 22, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 23", emoji:"💥", dayNumber: 23, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 24", emoji:"🌹", dayNumber: 24, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 25", emoji:"💙", dayNumber: 25, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 26", emoji:"💪", dayNumber: 26, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 27", emoji:"🚨", dayNumber: 27, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 28", emoji:"🎂", dayNumber: 28, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 29", emoji:"🎉", dayNumber: 29, superScore: 0),
+                              VocabCircleDays(color: .white, title: "day 30", emoji:"🏆", dayNumber: 30, superScore: 0)]
+    
+    
     
     
     
@@ -104,11 +141,14 @@ final class VocabWordViewModel: ObservableObject {
     
     // func to allocate 20 different words per circle day
     func wordsForDay(day: Int) -> [VocabWord] {
-        print(dayNumber)
+        print(words.count)
         dayNumber = day
+        print(dayNumber)
+        print("dayNumber = \(dayNumber)")
         let startIndex = (day - 1) * 20
+        print("startIndex = \(startIndex)")
         let endIndex = startIndex + 19
-        
+        print("endIndex = \(endIndex)")
         // Ensure startIndex is within bounds
         if (startIndex > words.count) {
             dayWordsArray = Array(words[0...19])
@@ -117,10 +157,11 @@ final class VocabWordViewModel: ObservableObject {
 
         // Ensure endIndex is within bounds, adjusting if necessary
         let safeEndIndex = min(endIndex, words.count - 1)
-        
+        print("safeIndex = \(safeEndIndex)")
         // Now it's safe to slice the array
         dayWordsArray = Array(words[startIndex...safeEndIndex])
-//        print(words[startIndex...safeEndIndex])
+        print(dayWordsArray)
+        print("dayWordsArray.count = \(dayWordsArray.count)")
 //        length = dayWordsArray.count
         
         
@@ -222,8 +263,24 @@ final class VocabWordViewModel: ObservableObject {
     }
     
     
+    
+    func updateSuperScore(forDay dayNumber: Int, withScore bestScore: Int) {
+        if let index = circles.firstIndex(where: { $0.dayNumber == dayNumber }) {
+            // Update the superScore for a specific day
+            circles[index].superScore = bestScore
+            // Notify observers that there has been a change
+            self.objectWillChange.send()
+            print(circles)
+        }
+    }
+    
+    
     func updateBestScore() {
-        bestScore = max(bestScore, score)
+        let newBestScore = max(bestScore, score)
+        if newBestScore > bestScore {
+            bestScore = newBestScore
+        }
+        updateSuperScore(forDay: dayNumber, withScore: newBestScore)
     }
     
     
@@ -237,6 +294,8 @@ final class VocabWordViewModel: ObservableObject {
         question = ""
         answerChoices = []
         dayWordsArray = [] // Assuming you want to reset this as well
+        percentBestScore = 0
+        bestScore = 0
         // Add any other properties you need to reset
     }
     

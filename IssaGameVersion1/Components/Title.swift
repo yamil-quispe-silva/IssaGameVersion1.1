@@ -13,15 +13,21 @@ struct Title: View {
         ZStack {
             
 //            Background()
+            
             VStack {
                 Text("TOEFL in 30 days!")
                     .padding()
                     .bold()
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 31))
                     .foregroundColor(.white)
+                    .padding(.top)
+                    .padding(29)
+                
+                Spacer()
                 
             } // VStack
-            .frame(width: 400, height: 670, alignment: .top)
+//            .frame(width: 400, height: 670, alignment: .top)
+//            Spacer()
         }
     }
 }

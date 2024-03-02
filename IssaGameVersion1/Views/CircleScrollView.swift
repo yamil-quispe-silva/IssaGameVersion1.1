@@ -12,61 +12,73 @@ struct CirclesScrollView: View {
     @EnvironmentObject var navigationController: NavigationController
     @ObservedObject private var viewModel = VocabWordViewModel()
     
-
-//    @State private var selectedDay: VocabCircleDays?
-    
     var body: some View {
         NavigationStack {
             ZStack {
                 Background()
                 
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 15) {
-                        ForEach(VocabCircleArray.circles) { circle in
-                            NavigationLink(value: circle) {
-                                //VStack contains the Circles and Day texts
-                                VStack {
-                                    Spacer()
-                                    //ZStack contains the Circles
-                                    ZStack {
-                                        Circle()
-                                            .fill(Color.white.opacity(0.9))
-                                            .frame(width: 120, height: 120)
-                                            .containerRelativeFrame(.horizontal)
-                                            .foregroundStyle(circle.color)
-//                                            .onTapGesture {
-//                                                generateHapticFeedback()
-//                                            }
+                VStack {
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 15) {
+                            ForEach(viewModel.circles) { circle in
+                                NavigationLink(value: circle) {
+                                    //VStack contains the Circles and Day texts
+                                    VStack {
+                                        //ZStack contains the Circles + emojis
+                                        ZStack {
+                                            Circle()
+                                                .fill(Color.white.opacity(0.9))
+                                                .frame(width: 120, height: 120)
+                                                .containerRelativeFrame(.horizontal)
+                                                .foregroundStyle(circle.color)
+    //                                            .onTapGesture {
+    //                                                generateHapticFeedback()
+    //                                            }
+                                            
+                                            Text(circle.emoji)
+                                                .font(.system(size: 55))
+                                        }
                                         
-                                        Text(circle.emoji)
-                                            .font(.system(size: 55))
-                                    }
-                                    Spacer()
-                                        .frame(height: 25)
-                                    Text(circle.title)
-                                        .bold()
-                                        .font(Font.custom("Swiss721BT-BlackRounded", size: 19))
-                                        .padding(.horizontal, 45)
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                } // VStack
-                            } // NavigationLink
-                                           
-                        } //ForEach
-                    }//HStack
-                    .navigationDestination(for: VocabCircleDays.self) { circle in 
-                        DayDetailView(dayNumber: circle.dayNumber, viewModel: viewModel)
-                    }
-                    .frame(height: 900)
-                    .scrollTargetLayout()
-                } //ScrollView
-                .scrollClipDisabled()
-                .contentMargins(105, for: .scrollContent)
-                .scrollTargetBehavior(.viewAligned)
-//                .onAppear {
-//                    viewModel.wordsForDay(day: dayNumber)
-//                }
+                                        Spacer()
+                                            .frame(height: 28)
+                                        
+                                        Text(circle.title)
+                                            .bold()
+                                            .font(Font.custom("Swiss721BT-BlackRounded", size: 19))
+                                            .padding(.horizontal, 45)
+                                            .foregroundColor(.white)
+                                        
+//                                        Spacer()
+//                                            .frame(height: 12)
+//                                        
+//                                        
+//                                        let percentage = Int((Double(circle.superScore) / Double(viewModel.length)) * 100)
+//                                        
+//                                        
+//                                        Text("\(percentage) %")
+//                                            .font(Font.custom("Swiss721BT-BlackRounded", size: 19))
+//                                            .foregroundColor(.yellow)
+                                        
+                                    } // VStack
+                                } // NavigationLink
+                            } //ForEach
+                        } //HStack
+                        .navigationDestination(for: VocabCircleDays.self) { circle in
+                            DayDetailView(dayNumber: circle.dayNumber, viewModel: viewModel)
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .scrollTargetLayout()
+                    } //ScrollView
+                    
+//                    .background(Color.black)
+                    .scrollClipDisabled()
+                    .contentMargins(101, for: .scrollContent)
+                    .scrollTargetBehavior(.viewAligned)
+                    
+                }
                 
+                //////////////////////////////////////////////
                 
                 Title()
                 
