@@ -23,7 +23,7 @@ final class VocabWordViewModel: ObservableObject {
     @Published private(set) var index = 0
     
     // score for the user
-    @Published private(set) var score = 0
+    @Published private(set) var score = 18
     
     // this var indicates if we have reached the end of the array
     @Published private(set) var reachedEnd = false
@@ -142,28 +142,28 @@ final class VocabWordViewModel: ObservableObject {
     
     //func to have the corresponding correct answer and the incorrect ones too
     func answerChoicesRandom(word: VocabWord) -> [Answer] {
-        var random1IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
-        var random2IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
-        var random3IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
+        var random1IndexFromDayWords = Int.random(in: 0..<words.count)
+        var random2IndexFromDayWords = Int.random(in: 0..<words.count)
+        var random3IndexFromDayWords = Int.random(in: 0..<words.count)
         
         while (index == random1IndexFromDayWords || random2IndexFromDayWords == random1IndexFromDayWords || random3IndexFromDayWords == random2IndexFromDayWords || random3IndexFromDayWords == random1IndexFromDayWords) {
-            random1IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
-            random2IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
-            random3IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
+            random1IndexFromDayWords = Int.random(in: 0..<words.count)
+            random2IndexFromDayWords = Int.random(in: 0..<words.count)
+            random3IndexFromDayWords = Int.random(in: 0..<words.count)
         }
         
         while (index == random2IndexFromDayWords) {
-            random2IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
+            random2IndexFromDayWords = Int.random(in: 0..<words.count)
         }
         
         while (index == random3IndexFromDayWords) {
-            random3IndexFromDayWords = Int.random(in: 0..<dayWordsArray.count)
+            random3IndexFromDayWords = Int.random(in: 0..<words.count)
         }
         
         // getting the random answers
-        let choice1: VocabWord = dayWordsArray[random1IndexFromDayWords]
-        let choice2: VocabWord = dayWordsArray[random2IndexFromDayWords]
-        let choice3: VocabWord = dayWordsArray[random3IndexFromDayWords]
+        let choice1: VocabWord = words[random1IndexFromDayWords]
+        let choice2: VocabWord = words[random2IndexFromDayWords]
+        let choice3: VocabWord = words[random3IndexFromDayWords]
         
         
         // conversion from VocabWord type to Anwer

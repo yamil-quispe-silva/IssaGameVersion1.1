@@ -27,7 +27,6 @@ struct EndScreen: View {
         ZStack {
             Background()
             VStack {
-               
                 Text("🔥")
                     .bold()
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 30))
@@ -45,6 +44,7 @@ struct EndScreen: View {
                     .bold()
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 210))
                     .foregroundColor(.white)
+                
                 Text("out of \(viewModel.length)")
                     .bold()
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 23))
