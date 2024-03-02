@@ -222,5 +222,23 @@ final class VocabWordViewModel: ObservableObject {
     }
     
     
+    func updateBestScore() {
+        bestScore = max(bestScore, score)
+    }
+    
+    
+    
+    func resetGame() {
+        score = 0
+        index = 0
+        reachedEnd = false
+        answerSelected = false
+        progress = 0.00
+        question = ""
+        answerChoices = []
+        dayWordsArray = [] // Assuming you want to reset this as well
+        // Add any other properties you need to reset
+    }
+    
         
 }

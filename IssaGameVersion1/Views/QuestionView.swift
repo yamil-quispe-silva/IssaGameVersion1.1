@@ -14,7 +14,9 @@ struct QuestionView: View {
     @Environment(\.presentationMode) var presentationMode
     
     // State variable to control the presentation of the EndScreen
-    @State private var showEndScreen = false
+//    @State private var showEndScreen = false
+    @State private var navigateToEndScreen = false
+
     
     
     init(dayNumber: Int, viewModel: VocabWordViewModel) {
@@ -54,23 +56,26 @@ struct QuestionView: View {
 
                 Button {
                     if (viewModel.index + 1 == viewModel.dayWordsArray.count) {
-                        showEndScreen = true
+                        navigateToEndScreen = true // Activate navigation link
                     } else {
                         viewModel.goToNextQuestion()
                     }
-                    
                 } label: {
                     PrimaryButton(text: "Next", background: viewModel.answerSelected ? .white : .gray)
                 }
                 .disabled(!viewModel.answerSelected)
                 
+                NavigationLink(destination: EndScreen(viewModel: viewModel), isActive: $navigateToEndScreen) {
+                    EmptyView()
+                }
+                
                 
             }
             .padding()
-            .fullScreenCover(isPresented: $showEndScreen, content: {
-                // Pass the viewModel to the EndScreen
-                EndScreen(viewModel: viewModel)
-            })
+//            .fullScreenCover(isPresented: $showEndScreen, content: {
+//                // Pass the viewModel to the EndScreen
+//                EndScreen(viewModel: viewModel)
+//            })
             
             
         }

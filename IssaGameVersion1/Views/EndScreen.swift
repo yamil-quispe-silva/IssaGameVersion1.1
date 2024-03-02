@@ -47,6 +47,23 @@ struct EndScreen: View {
             } // VStack
             .padding()
         } // ZStack
+        //to make the back button white
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    HStack {
+                        Image(systemName: "chevron.backward") // SwiftUI's default back arrow icon
+                            .foregroundColor(.white) // Customize the color here
+                        Text("Back")
+                            .font(Font.custom("Swiss721BT-BlackRounded", size: 18)) // Customize the font here
+                            .foregroundColor(.white) // Customize the color to match the arrow icon
+                    }
+                }
+            }
+        }
     }
 }
 
