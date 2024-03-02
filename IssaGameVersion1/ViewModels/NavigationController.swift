@@ -12,7 +12,7 @@ class NavigationController: ObservableObject {
     
     @Published var shouldShowRoot = false
     
-    // This method is intended to be called to reset navigation to the root view.
+    // Toggle the state back after setting it to true to prevent continuous resets
     func resetToRootView() {
         DispatchQueue.main.async {
             self.shouldShowRoot = true
