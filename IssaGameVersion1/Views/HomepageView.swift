@@ -10,14 +10,14 @@ import SwiftUI
 struct HomepageView: View {
     
     //@StateObject private var viewModel = VocabWordViewModel()
+    @EnvironmentObject var navigationController: NavigationController
     
     var body: some View {
         VStack {
-            ZStack {
-                CirclesScrollView()
-                    //environmentObject(viewModel)
-            } // ZStack
-        }//VStack General
+            
+            CirclesScrollView()
+            
+        }
     }// body View
 }//Homepage View
 

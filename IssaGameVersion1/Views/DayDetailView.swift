@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DayDetailView: View {
+    
+    @EnvironmentObject var navigationController: NavigationController
     @State var viewModel: VocabWordViewModel
     var dayNumber: Int
     
@@ -22,6 +24,7 @@ struct DayDetailView: View {
 //        self.wordsArray = viewModel.wordsForDay(day: dayNumber)
         // Change the scrollbar indicator color to white
         UIScrollView.appearance().indicatorStyle = .white
+        
     }
     
     var body: some View {

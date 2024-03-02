@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EndScreen: View {
     @State var viewModel: VocabWordViewModel
-    
+    @EnvironmentObject var navigationController: NavigationController
 
     //to make the back button of the list white
     @Environment(\.presentationMode) var presentationMode
@@ -43,6 +43,15 @@ struct EndScreen: View {
                     .bold()
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 21))
                     .foregroundColor(.white)
+                
+                Button("Back to Home") {
+                    navigationController.resetToRootView()
+                    
+                    viewModel.updateBestScore()
+                    viewModel.resetGame()
+                }
+                .foregroundColor(.white)
+                
                 
             } // VStack
             .padding()

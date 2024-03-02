@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var navigationController: NavigationController
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!!")
+        Group {
+            if navigationController.shouldShowRoot {
+                HomepageView()
+            } else {
+                CirclesScrollView()
+            }
         }
-        .padding()
+        .onChange(of: navigationController.shouldShowRoot) {
+            if navigationController.shouldShowRoot {
+                navigationController.resetToRootView()
+            }
+        }
     }
 }
 

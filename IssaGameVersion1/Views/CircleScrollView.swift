@@ -9,8 +9,10 @@ import SwiftUI
 import UIKit
 
 struct CirclesScrollView: View {
-
+    @EnvironmentObject var navigationController: NavigationController
     @ObservedObject private var viewModel = VocabWordViewModel()
+    
+
 //    @State private var selectedDay: VocabCircleDays?
     
     var body: some View {

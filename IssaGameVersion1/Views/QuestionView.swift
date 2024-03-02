@@ -13,6 +13,7 @@ struct QuestionView: View {
     //to make the back button of the list white
     @Environment(\.presentationMode) var presentationMode
     
+    
     // State variable to control the presentation of the EndScreen
 //    @State private var showEndScreen = false
     @State private var navigateToEndScreen = false
@@ -22,6 +23,7 @@ struct QuestionView: View {
     init(dayNumber: Int, viewModel: VocabWordViewModel) {
         self.dayNumber = dayNumber
         self.viewModel = viewModel
+        
     }
     
     

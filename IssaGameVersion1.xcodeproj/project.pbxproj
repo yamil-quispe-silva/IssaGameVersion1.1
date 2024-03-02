@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C1D441F2B91C25A004CFDE1 /* EndScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D441E2B91C25A004CFDE1 /* EndScreen.swift */; };
+		9C1D44212B92B918004CFDE1 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D44202B92B918004CFDE1 /* NavigationController.swift */; };
 		9C7E4FD02B7E869D0042623A /* swiss_721_black_rounded_bt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C7E4FCF2B7E869D0042623A /* swiss_721_black_rounded_bt.ttf */; };
 		9C89C27D2B8A8E3300E9DD42 /* VocabWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89C27C2B8A8E3200E9DD42 /* VocabWordViewModel.swift */; };
 		9C89C2812B8AC51A00E9DD42 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89C2802B8AC51A00E9DD42 /* QuestionView.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		9C1D441E2B91C25A004CFDE1 /* EndScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreen.swift; sourceTree = "<group>"; };
+		9C1D44202B92B918004CFDE1 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		9C7E4FCF2B7E869D0042623A /* swiss_721_black_rounded_bt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swiss_721_black_rounded_bt.ttf; sourceTree = "<group>"; };
 		9C7E4FD12B7E86E70042623A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9C89C27C2B8A8E3200E9DD42 /* VocabWordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabWordViewModel.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				9C89C27C2B8A8E3200E9DD42 /* VocabWordViewModel.swift */,
+				9C1D44202B92B918004CFDE1 /* NavigationController.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				9CDE9E1A2B7D7918005C7C25 /* VocabWord.swift in Sources */,
 				9CDE9E122B7D789A005C7C25 /* HomepageView.swift in Sources */,
 				9CDE9E162B7D78D9005C7C25 /* DayDetailView.swift in Sources */,
+				9C1D44212B92B918004CFDE1 /* NavigationController.swift in Sources */,
 				9C89C2872B8B2E0700E9DD42 /* AnswerRow.swift in Sources */,
 				9CDE9DAD2B7D779C005C7C25 /* ContentView.swift in Sources */,
 				9CDE9E1E2B7D7948005C7C25 /* Background.swift in Sources */,

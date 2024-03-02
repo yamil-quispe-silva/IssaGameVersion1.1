@@ -11,11 +11,12 @@ import SwiftUI
 struct IssaGameVersion1App: App {
     
 //    @StateObject private var viewModel = VocabWordViewModel()
+    var navigationController = NavigationController()
     
     var body: some Scene {
         WindowGroup {
-            HomepageView()
-//                .environmentObject(viewModel)
+            ContentView()
+                .environmentObject(navigationController)
         }
         
 
