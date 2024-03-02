@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1D441F2B91C25A004CFDE1 /* EndScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D441E2B91C25A004CFDE1 /* EndScreen.swift */; };
 		9C7E4FD02B7E869D0042623A /* swiss_721_black_rounded_bt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C7E4FCF2B7E869D0042623A /* swiss_721_black_rounded_bt.ttf */; };
 		9C89C27D2B8A8E3300E9DD42 /* VocabWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89C27C2B8A8E3200E9DD42 /* VocabWordViewModel.swift */; };
 		9C89C2812B8AC51A00E9DD42 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89C2802B8AC51A00E9DD42 /* QuestionView.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C1D441E2B91C25A004CFDE1 /* EndScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreen.swift; sourceTree = "<group>"; };
 		9C7E4FCF2B7E869D0042623A /* swiss_721_black_rounded_bt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swiss_721_black_rounded_bt.ttf; sourceTree = "<group>"; };
 		9C7E4FD12B7E86E70042623A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9C89C27C2B8A8E3200E9DD42 /* VocabWordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabWordViewModel.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				9CDE9E1B2B7D7933005C7C25 /* CircleScrollView.swift */,
 				9C89C2802B8AC51A00E9DD42 /* QuestionView.swift */,
 				9C89C2862B8B2E0700E9DD42 /* AnswerRow.swift */,
+				9C1D441E2B91C25A004CFDE1 /* EndScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CDE9E202B7D795F005C7C25 /* Title.swift in Sources */,
+				9C1D441F2B91C25A004CFDE1 /* EndScreen.swift in Sources */,
 				9CDE9E1A2B7D7918005C7C25 /* VocabWord.swift in Sources */,
 				9CDE9E122B7D789A005C7C25 /* HomepageView.swift in Sources */,
 				9CDE9E162B7D78D9005C7C25 /* DayDetailView.swift in Sources */,

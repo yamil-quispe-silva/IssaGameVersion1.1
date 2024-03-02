@@ -13,6 +13,10 @@ struct QuestionView: View {
     //to make the back button of the list white
     @Environment(\.presentationMode) var presentationMode
     
+    // State variable to control the presentation of the EndScreen
+    @State private var showEndScreen = false
+    
+    
     init(dayNumber: Int, viewModel: VocabWordViewModel) {
         self.dayNumber = dayNumber
         self.viewModel = viewModel
@@ -49,7 +53,12 @@ struct QuestionView: View {
                 Spacer()
 
                 Button {
-                    viewModel.goToNextQuestion()
+                    if (viewModel.index + 1 == viewModel.dayWordsArray.count) {
+                        showEndScreen = true
+                    } else {
+                        viewModel.goToNextQuestion()
+                    }
+                    
                 } label: {
                     PrimaryButton(text: "Next", background: viewModel.answerSelected ? .white : .gray)
                 }
@@ -58,6 +67,12 @@ struct QuestionView: View {
                 
             }
             .padding()
+            .fullScreenCover(isPresented: $showEndScreen, content: {
+                // Pass the viewModel to the EndScreen
+                EndScreen(viewModel: viewModel)
+            })
+            
+            
         }
         //to make the back button white
         .navigationBarBackButtonHidden(true)

@@ -43,6 +43,12 @@ final class VocabWordViewModel: ObservableObject {
     // has the 20 words of the day circle in an array ////////////////////
     @Published private(set) var dayWordsArray: [VocabWord] = []
     
+    // stores best score from user
+    @Published private(set) var bestScore = 0
+    
+    
+    
+    
     // Static sample data for previews
     static let sampleWords: [VocabWord] = [
         VocabWord(word: "consider", definition: "deem to be", translationSpanish: "considerar", sentences: [

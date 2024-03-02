@@ -53,6 +53,7 @@ struct DayDetailView: View {
                 Spacer()
                     .frame(height: 33)
                 
+                
                 NavigationLink(destination: QuestionView(dayNumber: dayNumber, viewModel: viewModel)){
                     
                     Text("Start!")
@@ -64,6 +65,7 @@ struct DayDetailView: View {
                         .background(Color.white)
                         .cornerRadius(35)
                 }
+                
             }
             .frame(width: 400, height: 670, alignment: .top)
             .padding()
