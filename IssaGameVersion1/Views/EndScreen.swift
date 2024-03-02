@@ -26,35 +26,48 @@ struct EndScreen: View {
     var body: some View {
         ZStack {
             Background()
-            VStack (spacing: 20) {
-                Text("Issa TOEFL Score")
-                    .padding()
+            VStack {
+               
+                Text("🔥")
                     .bold()
-                    .font(Font.custom("Swiss721BT-BlackRounded", size: 31))
+                    .font(Font.custom("Swiss721BT-BlackRounded", size: 30))
+                    .foregroundColor(.white)
+                    .padding(.top)
+                    .padding(2)
+                Text("YOUR SCORE:")
+                    .font(Font.custom("Swiss721BT-BlackRounded", size: 25))
                     .foregroundColor(.white)
                 
-                Text("Congrats you completed the game! 🥳")
-                    .padding()
-                    .font(Font.custom("Swiss721BT-BlackRounded", size: 21))
-                    .foregroundColor(.white)
+                Spacer()
                 
-                Text("You scored: \(viewModel.score) out of \(viewModel.length)")
-                    .padding()
+                
+                Text("\(viewModel.score)")
                     .bold()
-                    .font(Font.custom("Swiss721BT-BlackRounded", size: 21))
+                    .font(Font.custom("Swiss721BT-BlackRounded", size: 210))
+                    .foregroundColor(.white)
+                Text("out of \(viewModel.length)")
+                    .bold()
+                    .font(Font.custom("Swiss721BT-BlackRounded", size: 23))
                     .foregroundColor(.white)
                 
-                Button("Back to Home") {
+                Spacer()
+                
+                Button("Back Home") {
                     navigationController.resetToRootView()
-                    
                     viewModel.updateBestScore()
                     viewModel.resetGame()
                 }
-                .foregroundColor(.white)
-                
+                .foregroundColor(.black)
+                .font(Font.custom("Swiss721BT-BlackRounded", size: 18))
+                .padding(.vertical, 14)
+                .padding(.horizontal, 30)
+                .background(.white)
+                .clipShape(Capsule())
+                .padding(20)
                 
             } // VStack
-            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
         } // ZStack
         //to make the back button white
         .navigationBarBackButtonHidden(true)

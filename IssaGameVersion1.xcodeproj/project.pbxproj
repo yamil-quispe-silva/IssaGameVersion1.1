@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1340E02B93066600A4CE47 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1340DF2B93066600A4CE47 /* test.swift */; };
 		9C1D441F2B91C25A004CFDE1 /* EndScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D441E2B91C25A004CFDE1 /* EndScreen.swift */; };
 		9C1D44212B92B918004CFDE1 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D44202B92B918004CFDE1 /* NavigationController.swift */; };
 		9C7E4FD02B7E869D0042623A /* swiss_721_black_rounded_bt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C7E4FCF2B7E869D0042623A /* swiss_721_black_rounded_bt.ttf */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C1340DF2B93066600A4CE47 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		9C1D441E2B91C25A004CFDE1 /* EndScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreen.swift; sourceTree = "<group>"; };
 		9C1D44202B92B918004CFDE1 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		9C7E4FCF2B7E869D0042623A /* swiss_721_black_rounded_bt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swiss_721_black_rounded_bt.ttf; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				9C89C2802B8AC51A00E9DD42 /* QuestionView.swift */,
 				9C89C2862B8B2E0700E9DD42 /* AnswerRow.swift */,
 				9C1D441E2B91C25A004CFDE1 /* EndScreen.swift */,
+				9C1340DF2B93066600A4CE47 /* test.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				9C89C2852B8B2D7E00E9DD42 /* Answer.swift in Sources */,
 				9C89C2812B8AC51A00E9DD42 /* QuestionView.swift in Sources */,
 				9CDE9E1C2B7D7933005C7C25 /* CircleScrollView.swift in Sources */,
+				9C1340E02B93066600A4CE47 /* test.swift in Sources */,
 				9CDE9DAB2B7D779C005C7C25 /* IssaGameVersion1App.swift in Sources */,
 				9C89C2892B8B37CF00E9DD42 /* PrimaryButton.swift in Sources */,
 				9C89C2832B8B2B3800E9DD42 /* ProgressBar.swift in Sources */,
