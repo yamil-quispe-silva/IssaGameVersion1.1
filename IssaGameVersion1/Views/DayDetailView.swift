@@ -36,7 +36,7 @@ struct DayDetailView: View {
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 37))
                     .foregroundColor(.white)
                 Text("daily goal:  \(viewModel.length) words")
-                    .padding(2)
+                    .padding(4)
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 18))
                     .foregroundColor(.yellow)
 //                Text("best score:  \(viewModel.circles[dayNumber - 1].superScore) / 20")
@@ -47,10 +47,10 @@ struct DayDetailView: View {
                     .frame(height: 20)
                 List {
                     ForEach(viewModel.wordsForDay(day: dayNumber)) { word in
-                        Text("\(word.word)  ---  \(word.translationSpanish)")
+                        Text("\(word.word)  =  \(word.translationSpanish)")
                             .padding(8)
                             .bold()
-                            .font(Font.custom("Swiss721BT-BlackRounded", size: 20))
+                            .font(Font.custom("Swiss721BT-BlackRounded", size: 18))
                             .foregroundColor(.white)
                             .listRowBackground(Color.clear)
                     }

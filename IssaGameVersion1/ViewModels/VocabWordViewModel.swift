@@ -141,14 +141,14 @@ final class VocabWordViewModel: ObservableObject {
     
     // func to allocate 20 different words per circle day
     func wordsForDay(day: Int) -> [VocabWord] {
-        print(words.count)
+//        print(words.count)
         dayNumber = day
-        print(dayNumber)
-        print("dayNumber = \(dayNumber)")
+//        print(dayNumber)
+//        print("dayNumber = \(dayNumber)")
         let startIndex = (day - 1) * 20
-        print("startIndex = \(startIndex)")
+//        print("startIndex = \(startIndex)")
         let endIndex = startIndex + 19
-        print("endIndex = \(endIndex)")
+//        print("endIndex = \(endIndex)")
         // Ensure startIndex is within bounds
         if (startIndex > words.count) {
             dayWordsArray = Array(words[0...19])
@@ -157,11 +157,11 @@ final class VocabWordViewModel: ObservableObject {
 
         // Ensure endIndex is within bounds, adjusting if necessary
         let safeEndIndex = min(endIndex, words.count - 1)
-        print("safeIndex = \(safeEndIndex)")
+//        print("safeIndex = \(safeEndIndex)")
         // Now it's safe to slice the array
         dayWordsArray = Array(words[startIndex...safeEndIndex])
-        print(dayWordsArray)
-        print("dayWordsArray.count = \(dayWordsArray.count)")
+//        print(dayWordsArray)
+//        print("dayWordsArray.count = \(dayWordsArray.count)")
 //        length = dayWordsArray.count
         
         
