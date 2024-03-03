@@ -44,7 +44,7 @@ struct QuestionView: View {
                     .foregroundColor(.yellow)
                 
                 
-                VStack (alignment: .center, spacing: 18) {
+                VStack (alignment: .center, spacing: 23) {
                     ForEach(viewModel.answerChoices, id: \.id) { answer in
                         AnswerRow(answer: answer, viewModel: viewModel)
                     }
