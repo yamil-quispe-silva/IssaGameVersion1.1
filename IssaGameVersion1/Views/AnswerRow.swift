@@ -86,31 +86,28 @@ struct AnswerRow: View {
     @State private var isSelected = false
     
     // Custom colors
-    var green = Color(hue: 0.437, saturation: 0.711, brightness: 0.711)
-    var red = Color(red: 0.71, green: 0.094, blue: 0.1)
+//    var green = Color(hue: 0.437, saturation: 0.711, brightness: 0.711)
+//    var red = Color(red: 0.71, green: 0.094, blue: 0.1)
     
     var body: some View {
         HStack(spacing: 25) {
             Image(systemName: "circle.fill")
                 .font(.caption)
-                .foregroundColor(viewModel.answerSelected && answer.isCorrect ? green : (isSelected ? red : .gray))
+                .foregroundColor(viewModel.answerSelected && answer.isCorrect ? .green : (isSelected ? .red : .gray))
                 
             
             
-            HStack(spacing: 5) {
+            HStack(spacing: 4) {
                 Text(answer.word)
                     .bold()
-                    .font(Font.custom("Swiss721BT-BlackRounded", size: 16))
+                    .font(Font.custom("Swiss721BT-BlackRounded", size: 17))
 //                    .foregroundColor(isSelected ? (answer.isCorrect ? green : red): .gray)
-                    .foregroundColor(viewModel.answerSelected ? (isSelected ? (answer.isCorrect ? green : red) : (answer.isCorrect ? green : .gray)): .gray)
-                
-                
-                
+                    .foregroundColor(viewModel.answerSelected ? (isSelected ? (answer.isCorrect ? .green : .red) : (answer.isCorrect ? .green : .gray)): .gray)
                 
                 
                 Text("= \(answer.translationSpanish)")
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 16))
-                    .foregroundColor(viewModel.answerSelected ? (isSelected ? (answer.isCorrect ? green : red): (answer.isCorrect ? green : .gray)) : .clear)
+                    .foregroundColor(viewModel.answerSelected ? (isSelected ? (answer.isCorrect ? .green : .red): (answer.isCorrect ? .green : .gray)) : .clear)
                     
             }
             
@@ -120,7 +117,7 @@ struct AnswerRow: View {
             // or the isSelect if is false
             if viewModel.answerSelected {
                 Image(systemName: answer.isCorrect ? "checkmark.circle.fill" : "x.circle.fill")
-                    .foregroundColor(isSelected ? (answer.isCorrect ? green : .red) : (answer.isCorrect ? green : .gray))
+                    .foregroundColor(isSelected ? (answer.isCorrect ? .green : .red) : (answer.isCorrect ? .green : .gray))
             }
         }
         .padding(26)
@@ -129,7 +126,7 @@ struct AnswerRow: View {
         .overlay(
             RoundedRectangle(cornerRadius: 22) 
             
-                .stroke(viewModel.answerSelected ? (isSelected ? (answer.isCorrect ? green : red): .gray) : .gray, lineWidth: 10)
+                .stroke(viewModel.answerSelected ? (isSelected ? (answer.isCorrect ? .green : .red): .gray) : .gray, lineWidth: 10)
             
 //                .stroke(viewModel.answerSelected ? (isSelected || !viewModel.answerSelected ? (answer.isCorrect ? green : red) : .gray) : .gray, lineWidth: 8)
             

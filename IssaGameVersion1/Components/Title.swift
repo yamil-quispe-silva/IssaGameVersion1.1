@@ -15,19 +15,23 @@ struct Title: View {
 //            Background()
             
             VStack {
+                Spacer()
+                    .frame(height: 45)
                 Text("TOEFL in 30 days!")
-                    .padding()
+                    .padding(10)
+//                    .padding(.top)
                     .bold()
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 31))
                     .foregroundColor(.white)
-                    .padding(.top)
-                    .padding(29)
+
+                Text("Total: 600 words")
+                    .bold()
+                    .font(Font.custom("Swiss721BT-BlackRounded", size: 22))
+                    .foregroundColor(.yellow)
                 
                 Spacer()
                 
             } // VStack
-//            .frame(width: 400, height: 670, alignment: .top)
-//            Spacer()
         }
     }
 }

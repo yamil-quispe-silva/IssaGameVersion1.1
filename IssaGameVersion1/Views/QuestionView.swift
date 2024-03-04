@@ -29,9 +29,11 @@ struct QuestionView: View {
             VStack (spacing: 30) {
                 HStack {
                     Text("Day \(dayNumber)")
-                        .font(Font.custom("Swiss721BT-BlackRounded", size: 23))
+                        .font(Font.custom("Swiss721BT-BlackRounded", size: 25))
                         .foregroundColor(.white)
+                    
                     Spacer()
+                    
                     Text("\(viewModel.index + 1) out of \(viewModel.length)")
                         .font(Font.custom("Swiss721BT-BlackRounded", size: 22))
                         .foregroundColor(.white)
