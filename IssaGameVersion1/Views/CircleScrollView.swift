@@ -11,6 +11,7 @@ import UIKit
 struct CirclesScrollView: View {
     @EnvironmentObject var navigationController: NavigationController
     @ObservedObject private var viewModel = VocabWordViewModel()
+    @State private var isSheetPresented = false
     
     var body: some View {
         NavigationStack {
@@ -51,11 +52,7 @@ struct CirclesScrollView: View {
                                         
 //                                        Spacer()
 //                                            .frame(height: 12)
-//                                        
-//                                        
 //                                        let percentage = Int((Double(circle.superScore) / Double(viewModel.length)) * 100)
-//                                        
-//                                        
 //                                        Text("\(percentage) %")
 //                                            .font(Font.custom("Swiss721BT-BlackRounded", size: 19))
 //                                            .foregroundColor(.yellow)
@@ -80,7 +77,45 @@ struct CirclesScrollView: View {
                 
                 //////////////////////////////////////////////
                 
+                
                 Title()
+                
+                
+                //////////////////////////////////////////////
+                
+                
+                // TipsButton Section
+                VStack {
+                    Spacer()
+                    
+                    HStack {
+                        
+                        Button {
+                            print("tapped")
+                            isSheetPresented.toggle()
+                            
+                        } label: {
+                            Image(systemName: "lightbulb.circle.fill")
+                                .frame(width: 70, height: 70)
+                                .font(.system(size: 55, weight: .bold))
+                                .foregroundColor(Color.white.opacity(0.9))
+                                .shadow(radius: 25)
+                        }
+                        .padding()
+                        .padding(.leading)
+                        
+                        Spacer()
+                        
+                    }
+                    .sheet(isPresented: $isSheetPresented) {
+                        SheetView(isSheetPresented: $isSheetPresented)
+                            .presentationDetents([.medium, .large])
+                        
+                    }
+                }
+                
+            
+                
                 
             } // ZStack
         }// NavigationView

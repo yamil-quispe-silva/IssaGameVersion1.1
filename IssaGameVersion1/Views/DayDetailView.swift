@@ -35,7 +35,7 @@ struct DayDetailView: View {
                 Text("Day \(dayNumber)")
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 37))
                     .foregroundColor(.white)
-                Text("daily goal:  \(viewModel.length) words")
+                Text("You'll practice:  \(viewModel.length) words")
                     .padding(4)
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 18))
                     .foregroundColor(.yellow)

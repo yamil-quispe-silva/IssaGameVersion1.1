@@ -10,16 +10,20 @@ import SwiftUI
 @main
 struct IssaGameVersion1App: App {
     
-    
-    // 230 json , need 600
-    
-//    @StateObject private var viewModel = VocabWordViewModel()
+    @State private var isSplashScreenViewPresented = true
     var navigationController = NavigationController()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(navigationController)
+            
+            if !isSplashScreenViewPresented {
+                ContentView()
+                    .environmentObject(navigationController)
+            } else {
+                SplashScreen(isPresented: $isSplashScreenViewPresented )
+            }
+            
+            
         }
         
 

@@ -6,5 +6,10 @@
 	<array>
 		<string>swiss_721_black_rounded_bt.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIImageName</key>
+		<string></string>
+	</dict>
 </dict>
 </plist>

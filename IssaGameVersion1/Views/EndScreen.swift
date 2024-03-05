@@ -60,8 +60,8 @@ struct EndScreen: View {
                     navigationController.resetToRootView()
                 }
                 .foregroundColor(.black)
-                .font(Font.custom("Swiss721BT-BlackRounded", size: 18))
-                .padding(.vertical, 14)
+                .font(Font.custom("Swiss721BT-BlackRounded", size: 20))
+                .padding(.vertical, 17)
                 .padding(.horizontal, 30)
                 .background(.white)
                 .clipShape(Capsule())
