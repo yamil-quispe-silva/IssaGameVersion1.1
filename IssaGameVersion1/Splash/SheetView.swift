@@ -200,7 +200,7 @@ struct SheetView: View {
                                         .font(Font.custom("Swiss721BT-BlackRounded", size: 80))
                                         .foregroundColor(.yellow)
                                     VStack {
-                                        Text("Vocabulary is King!")
+                                        Text("Vocabulary is King")
                                             .padding()
                                             .font(Font.custom("Swiss721BT-BlackRounded", size: 22))
                                             .foregroundColor(.yellow)
