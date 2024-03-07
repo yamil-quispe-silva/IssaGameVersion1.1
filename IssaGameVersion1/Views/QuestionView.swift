@@ -44,6 +44,7 @@ struct QuestionView: View {
                 Text(viewModel.question)
                     .font(Font.custom("Swiss721BT-BlackRounded", size: 22))
                     .foregroundColor(.yellow)
+                    .fixedSize(horizontal: false, vertical: true)
                 
                 
                 VStack (alignment: .center, spacing: 23) {
@@ -51,10 +52,11 @@ struct QuestionView: View {
                         AnswerRow(answer: answer, viewModel: viewModel)
                     }
                 }
-                        
+                
+                
                 Spacer()
                 
-
+                
                 Button {
                     if (viewModel.index + 1 == viewModel.dayWordsArray.count) {
                         navigateToEndScreen = true // Activate navigation link
@@ -69,8 +71,6 @@ struct QuestionView: View {
                 NavigationLink(destination: EndScreen(viewModel: viewModel), isActive: $navigateToEndScreen) {
                     EmptyView()
                 }
-                
-                
             }
             .padding()
             

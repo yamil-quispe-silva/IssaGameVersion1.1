@@ -71,13 +71,13 @@ struct SheetView: View {
                                     .foregroundColor(.white)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                 
-                                Text("Not long ago, I decided I wanted to come to the US for university, the only problem was that I did not know English at all, even worse, I had already finished high school and had literally NO TIME. In the midst of this,  I learned about the principles and strategies polyglots use to learn languages very fast, and since I did not have any other option, I tried them. I had only 6 months to learn English and prepare for the TOEFL exam. by the end of this period, I had gotten a 100+ score, which allowed me to comfortably apply and get accepted to the best universities in the world.")
+                                Text("Not long ago, I decided I wanted to come to the US for university, the only problem was that I did not know English at all, even worse, I had already finished high school and had literally NO TIME. In the midst of this, I learned about the principles and strategies polyglots use to learn languages very fast, and since I did not have any other option, I tried them. I had only 6 months to learn English and prepare for the TOEFL exam. By the end of this period, I had gotten a 100+ score, which allowed me to apply and get accepted to the best universities in the world.")
                                     .padding(7)
                                     .font(Font.custom("Swiss721BT-BlackRounded", size: 16))
                                     .foregroundColor(.white)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                 
-                                Text("Here, you will read a practical guide with ALL the principles and strategies I used that allow me (and many others!) to learn English in 6 months and without even leaving my dorm room in Peru. If I could do this, so can you!")
+                                Text("This is a practical guide with ALL the principles and strategies I used that allow me (and many others!) to learn English in 6 months and without even leaving my dorm room in Peru. If I could do this, so can you!")
                                     .padding(7)
                                     .font(Font.custom("Swiss721BT-BlackRounded", size: 16))
                                     .foregroundColor(.white)
