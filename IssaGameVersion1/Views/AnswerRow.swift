@@ -40,31 +40,6 @@ struct AnswerRow: View {
             }
             
             
-            
-            
-            
-//            
-//            HStack(spacing: 4) {
-//                VStack(alignment: .leading, spacing: 1) { // Use a VStack for vertical stacking
-//                    Text(answer.word)
-//                        .bold()
-//                        .font(Font.custom("Swiss721BT-BlackRounded", size: 17))
-//                        .foregroundColor(viewModel.answerSelected ? (isSelected ? (answer.isCorrect ? .green : .red) : (answer.isCorrect ? .green : .gray)): .gray)
-//                        .fixedSize(horizontal: false, vertical: true) // Allow text to wrap vertically
-//                    
-//                    Text("= \(answer.translationSpanish)")
-//                        .font(Font.custom("Swiss721BT-BlackRounded", size: 13))
-//                        .foregroundColor(viewModel.answerSelected ? (isSelected ? (answer.isCorrect ? .green : .red) : (answer.isCorrect ? .green : .gray)) : .clear)
-//                        .fixedSize(horizontal: false, vertical: true) // Allow text to wrap vertically
-//                }
-//                .frame(maxWidth: .infinity, alignment: .leading) // Use maximum available width
-//                
-//            }
-//            
-            
-            
-            
-            
             Spacer()
             
             // only show the color for the isCorrect in green
@@ -93,10 +68,6 @@ struct AnswerRow: View {
         }
     }
 }
-
-
-
-
 
 
 
