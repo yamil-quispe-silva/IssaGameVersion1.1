@@ -187,17 +187,15 @@ final class VocabWordViewModel: ObservableObject {
         var random2IndexFromDayWords = Int.random(in: 0..<words.count)
         var random3IndexFromDayWords = Int.random(in: 0..<words.count)
         
-        while (index == random1IndexFromDayWords || random2IndexFromDayWords == random1IndexFromDayWords || random3IndexFromDayWords == random2IndexFromDayWords || random3IndexFromDayWords == random1IndexFromDayWords) {
+        while (index == random1IndexFromDayWords || random1IndexFromDayWords == random2IndexFromDayWords  || random1IndexFromDayWords == random3IndexFromDayWords) {
             random1IndexFromDayWords = Int.random(in: 0..<words.count)
-            random2IndexFromDayWords = Int.random(in: 0..<words.count)
-            random3IndexFromDayWords = Int.random(in: 0..<words.count)
         }
         
-        while (index == random2IndexFromDayWords) {
+        while (index == random2IndexFromDayWords || random2IndexFromDayWords == random1IndexFromDayWords  || random2IndexFromDayWords == random3IndexFromDayWords) {
             random2IndexFromDayWords = Int.random(in: 0..<words.count)
         }
         
-        while (index == random3IndexFromDayWords) {
+        while (index == random3IndexFromDayWords || random3IndexFromDayWords == random1IndexFromDayWords  || random3IndexFromDayWords == random2IndexFromDayWords) {
             random3IndexFromDayWords = Int.random(in: 0..<words.count)
         }
         
